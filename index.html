@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Position property</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			height: 300vh;
+		}
+
+		.large {
+			background-color: yellow;
+			width: 500px;
+			height: 700px;
+			border-bottom: 200px solid red;
+			border-top: 30px solid white;
+			/* position: fixed; */
+		}
+
+		.medium {
+			width: 500px;
+			height: 50px;
+			background-color: red;
+			position: absolute;
+			bottom: 400px;
+			/* 	position: absolute;
+			top: 0;
+			left: 0; */
+		}
+
+		.window {
+		;
+		}
+		.window:nth-of-type(1) {
+			margin-right: 6px;
+		}
+		
+		
+		
+		.triangle-down {
+  			width: 0;
+  			height: 0;
+  			border-left: 50px solid transparent;
+  			border-right: 50px solid transparent;
+  			border-top: 100px solid red;
+			position: absolute;
+			bottom: 300px;
+		}
+		.triangle-down2 {
+			width: 0;
+  			height: 0;
+  			border-left: 50px solid transparent;
+  			border-right: 50px solid transparent;
+  			border-top: 100px solid red;
+			position: absolute;
+			bottom: 300px;
+			left:100px;
+			
+		}
+
+		.triangle-down3 {
+			width: 0;
+  			height: 0;
+  			border-left: 50px solid transparent;
+  			border-right: 50px solid transparent;
+  			border-top: 100px solid red;
+			position: absolute;
+			bottom: 300px;
+			left:200px;
+			
+		}
+
+		.triangle-down4 {
+			width: 0;
+  			height: 0;
+  			border-left: 50px solid transparent;
+  			border-right: 50px solid transparent;
+  			border-top: 100px solid red;
+			position: absolute;
+			bottom: 300px;
+			left:300px;
+			
+		}
+
+		.triangle-down5 {
+			width: 0;
+  			height: 0;
+  			border-left: 50px solid transparent;
+  			border-right: 50px solid transparent;
+  			border-top: 100px solid red;
+			position: absolute;
+			bottom: 300px;
+			left:400px;
+		}
+
+		.triangle-row2-down1 {
+			width: 0;
+  			height: 0;
+  			border-left: 50px solid transparent;
+  			border-right: 50px solid transparent;
+  			border-top: 75px solid red;
+			position: absolute;
+			bottom: 450px;
+			left:0px;
+		}
+
+		.triangle-row2-down2 {
+			width: 0;
+  			height: 0;
+  			border-left: 50px solid transparent;
+  			border-right: 50px solid transparent;
+  			border-top: 75px solid red;
+			position: absolute;
+			bottom: 450px;
+			left:100px;
+		}
+
+		.triangle-row2-down3 {
+			width: 0;
+  			height: 0;
+  			border-left: 50px solid transparent;
+  			border-right: 50px solid transparent;
+  			border-top: 75px solid red;
+			position: absolute;
+			bottom: 450px;
+			left:200px;
+		}
+
+		.triangle-row2-down4 {
+			width: 0;
+  			height: 0;
+  			border-left: 50px solid transparent;
+  			border-right: 50px solid transparent;
+  			border-top: 75px solid red;
+			position: absolute;
+			bottom: 450px;
+			left:300px;
+		}
+
+		.triangle-row2-down5 {
+			width: 0;
+  			height: 0;
+  			border-left: 50px solid transparent;
+  			border-right: 50px solid transparent;
+  			border-top: 75px solid red;
+			position: absolute;
+			bottom: 450px;
+			left:400px;
+		}
+
+		.triangle-row3-down1 {
+			width: 0;
+  			height: 0;
+  			border-left: 40px solid transparent;
+  			border-right: 40px solid transparent;
+  			border-top: 60px solid red;
+			position: absolute;
+			bottom: 525px;
+			left:10px;
+		}
+
+		.triangle-row3-down2 {
+			width: 0;
+  			height: 0;
+  			border-left: 40px solid transparent;
+  			border-right: 40px solid transparent;
+  			border-top: 60px solid red;
+			position: absolute;
+			bottom: 525px;
+			left:110px;
+		}
+
+		.triangle-row3-down3 {
+			width: 0;
+  			height: 0;
+  			border-left: 40px solid transparent;
+  			border-right: 40px solid transparent;
+  			border-top: 60px solid red;
+			position: absolute;
+			bottom: 525px;
+			left:210px;
+		}
+
+		.triangle-row3-down4 {
+			width: 0;
+  			height: 0;
+  			border-left: 40px solid transparent;
+  			border-right: 40px solid transparent;
+  			border-top: 60px solid red;
+			position: absolute;
+			bottom: 525px;
+			left:310px;
+		}
+
+		.triangle-row3-down5 {
+			width: 0;
+  			height: 0;
+  			border-left: 40px solid transparent;
+  			border-right: 40px solid transparent;
+  			border-top: 60px solid red;
+			position: absolute;
+			bottom: 525px;
+			left:410px;
+		}
+
+		.triangle-row4-down1 {
+			width: 0;
+  			height: 0;
+  			border-left: 35px solid transparent;
+  			border-right: 35px solid transparent;
+  			border-top: 50px solid red;
+			position: absolute;
+			bottom: 585px;
+			left:15px;
+		}
+
+		.triangle-row4-down2 {
+			width: 0;
+  			height: 0;
+  			border-left: 35px solid transparent;
+  			border-right: 35px solid transparent;
+  			border-top: 50px solid red;
+			position: absolute;
+			bottom: 585px;
+			left:115px;
+		}
+
+		.triangle-row4-down3 {
+			width: 0;
+  			height: 0;
+  			border-left: 35px solid transparent;
+  			border-right: 35px solid transparent;
+  			border-top: 50px solid red;
+			position: absolute;
+			bottom: 585px;
+			left:215px;
+		}
+
+		.triangle-row4-down4 {
+			width: 0;
+  			height: 0;
+  			border-left: 35px solid transparent;
+  			border-right: 35px solid transparent;
+  			border-top: 50px solid red;
+			position: absolute;
+			bottom: 585px;
+			left:315px;
+		}
+
+		.triangle-row4-down5 {
+			width: 0;
+  			height: 0;
+  			border-left: 35px solid transparent;
+  			border-right: 35px solid transparent;
+  			border-top: 50px solid red;
+			position: absolute;
+			bottom: 585px;
+			left:415px;
+		}
+
+		.triangle-row5-down1 {
+			width: 0;
+  			height: 0;
+  			border-left: 30px solid transparent;
+  			border-right: 30px solid transparent;
+  			border-top: 40px solid red;
+			position: absolute;
+			bottom: 635px;
+			left:20px;
+		}
+
+		.triangle-row5-down2 {
+			width: 0;
+  			height: 0;
+  			border-left: 30px solid transparent;
+  			border-right: 30px solid transparent;
+  			border-top: 40px solid red;
+			position: absolute;
+			bottom: 635px;
+			left:120px;
+		}
+
+		.triangle-row5-down3 {
+			width: 0;
+  			height: 0;
+  			border-left: 30px solid transparent;
+  			border-right: 30px solid transparent;
+  			border-top: 40px solid red;
+			position: absolute;
+			bottom: 635px;
+			left:220px;
+		}
+
+		.triangle-row5-down4 {
+			width: 0;
+  			height: 0;
+  			border-left: 30px solid transparent;
+  			border-right: 30px solid transparent;
+  			border-top: 40px solid red;
+			position: absolute;
+			bottom: 635px;
+			left:320px;
+		}
+
+		.triangle-row5-down5{
+			width: 0;
+  			height: 0;
+  			border-left: 30px solid transparent;
+  			border-right: 30px solid transparent;
+  			border-top: 40px solid red;
+			position: absolute;
+			bottom: 635px;
+			left:420px;
+		}
+
+		.triangle-row6-down1{
+			width: 0;
+  			height: 0;
+  			border-left: 25px solid transparent;
+  			border-right: 25px solid transparent;
+  			border-top: 35px solid red;
+			position: absolute;
+			bottom: 675px;
+			left:25px;
+		}
+
+		.triangle-row6-down2{
+			width: 0;
+  			height: 0;
+  			border-left: 25px solid transparent;
+  			border-right: 25px solid transparent;
+  			border-top: 35px solid red;
+			position: absolute;
+			bottom: 675px;
+			left:125px;
+		}
+
+		.triangle-row6-down3{
+			width: 0;
+  			height: 0;
+  			border-left: 25px solid transparent;
+  			border-right: 25px solid transparent;
+  			border-top: 35px solid red;
+			position: absolute;
+			bottom: 675px;
+			left:225px;
+		}
+
+		.triangle-row6-down4{
+			width: 0;
+  			height: 0;
+  			border-left: 25px solid transparent;
+  			border-right: 25px solid transparent;
+  			border-top: 35px solid red;
+			position: absolute;
+			bottom: 675px;
+			left:325px;
+		}
+
+		.triangle-row6-down5{
+			width: 0;
+  			height: 0;
+  			border-left: 25px solid transparent;
+  			border-right: 25px solid transparent;
+  			border-top: 35px solid red;
+			position: absolute;
+			bottom: 675px;
+			left:425px;
+		}
+
+		.triangle-row7-down1{
+			width: 0;
+  			height: 0;
+  			border-left: 20px solid transparent;
+  			border-right: 20px solid transparent;
+  			border-top: 30px solid red;
+			position: absolute;
+			bottom: 710px;
+			left:30px;
+		}
+
+		.triangle-row7-down2{
+			width: 0;
+  			height: 0;
+  			border-left: 20px solid transparent;
+  			border-right: 20px solid transparent;
+  			border-top: 30px solid red;
+			position: absolute;
+			bottom: 710px;
+			left:130px;
+		}
+
+		.triangle-row7-down3{
+			width: 0;
+  			height: 0;
+  			border-left: 20px solid transparent;
+  			border-right: 20px solid transparent;
+  			border-top: 30px solid red;
+			position: absolute;
+			bottom: 710px;
+			left:230px;
+		}
+
+		.triangle-row7-down4{
+			width: 0;
+  			height: 0;
+  			border-left: 20px solid transparent;
+  			border-right: 20px solid transparent;
+  			border-top: 30px solid red;
+			position: absolute;
+			bottom: 710px;
+			left:330px;
+		}
+
+		.triangle-row7-down5{
+			width: 0;
+  			height: 0;
+  			border-left: 20px solid transparent;
+  			border-right: 20px solid transparent;
+  			border-top: 30px solid red;
+			position: absolute;
+			bottom: 710px;
+			left:430px;
+		}
+
+		.triangle-row8-down1 {
+			width: 0;
+  			height: 0;
+  			border-left: 15px solid transparent;
+  			border-right: 15px solid transparent;
+  			border-top: 25px solid red;
+			position: absolute;
+			bottom: 740px;
+			left:35px;
+		}
+
+		.triangle-row8-down2 {
+			width: 0;
+  			height: 0;
+  			border-left: 15px solid transparent;
+  			border-right: 15px solid transparent;
+  			border-top: 25px solid red;
+			position: absolute;
+			bottom: 740px;
+			left:135px;
+		}
+
+		.triangle-row8-down3 {
+			width: 0;
+  			height: 0;
+  			border-left: 15px solid transparent;
+  			border-right: 15px solid transparent;
+  			border-top: 25px solid red;
+			position: absolute;
+			bottom: 740px;
+			left:235px;
+		}
+		.triangle-row8-down4 {
+			width: 0;
+  			height: 0;
+  			border-left: 15px solid transparent;
+  			border-right: 15px solid transparent;
+  			border-top: 25px solid red;
+			position: absolute;
+			bottom: 740px;
+			left:335px;
+		}
+
+		.triangle-row8-down5 {
+			width: 0;
+  			height: 0;
+  			border-left: 15px solid transparent;
+  			border-right: 15px solid transparent;
+  			border-top: 25px solid red;
+			position: absolute;
+			bottom: 740px;
+			left:435px;
+		}
+
+		.triangle-up {
+			width: 0;
+  			height: 0;
+  			border-left: 75px solid transparent;
+  			border-right: 75px solid transparent;
+  			border-bottom: 150px solid brown;
+			position: absolute;
+			bottom: 260px;
+			left: 225px;
+
+
+		}
+
+
+		h1 {
+			font-family: sans-serif;
+			font-size: 55px;
+			color: white;
+			position: absolute;
+			bottom: 165px;
+			left: 45px;
+			letter-spacing: -4px;
+			line-height: 45px
+
+		}
+
+		h2 {
+			font-family: sans-serif;
+			font-size: 38px;
+			color: white;
+			position: absolute;
+			bottom: 405px;
+			left: 45px;
+			letter-spacing: -2px;
+
+
+
+		}
+
+		.circle {
+  			width: 85px;
+  			height: 85px;
+  			background-color: yellow;
+  			border-radius: 50%;
+  			position: absolute;
+  			bottom: 265px;
+  			left: 257.5px;
+		}
+
+		.tree-1 {
+			width: 35px;
+  			height: 40px;
+  			background-color:brown;
+  			position: absolute;
+  			bottom: 280px;
+  			left: 282.5px;
+		}
+
+		.tree-2 {
+			width: 88px;
+  			height: 8px;
+  			background-color:brown;
+  			position: absolute;
+  			bottom: 315px;
+  			left: 256px;
+		}
+
+		.tree-3 {
+			width: 8px;
+  			height: 100px;
+  			background-color:brown;
+  			position: absolute;
+  			bottom: 260px;
+  			left: 295.5px;
+		}
+
+		.tree-4 {
+			width: 88px;
+  			height: 8px;
+  			background-color:brown;
+  			position: absolute;
+  			bottom: 275px;
+  			left: 256px;
+		}
+
+		.tree-5 {
+			width: 20px;
+  			height: 8px;
+  			background-color:brown;
+  			position: absolute;
+  			bottom: 270px;
+  			left: 302.5px;
+  			rotate: 45deg;
+		}
+
+		.tree-6 {
+			width: 20px;
+  			height: 8px;
+  			background-color:brown;
+  			position: absolute;
+  			bottom: 270px;
+  			left: 276.5px;
+  			rotate: 135deg;
+		}
+
+		.tree-7 {
+			width: 35px;
+  			height: 8px;
+  			background-color:brown;
+  			position: absolute;
+  			bottom: 330px;
+  			left: 300px;
+  			rotate: 135deg;
+		}
+
+		.tree-8 {
+			width: 32px;
+  			height: 8px;
+  			background-color:brown;
+  			position: absolute;
+  			bottom: 328px;
+  			left: 267.5px;
+  			rotate: 225deg;
+		}
+
+		img {
+			width: 500px;
+			height: 700px;
+			position: absolute;
+			left: 600px;
+			bottom:80px;
+		}
+
+
+
+
+
+	</style>
+</head>
+
+<body>
+	<div class="large"></div>
+	<div class="medium"></div>
+	<div class="small">
+		<div class="window"></div>
+		<div class="window"></div>
+	</div>
+	<div class="container">
+		<div class="triangle-down"></div>
+		<div class="triangle-down2"></div>
+		<div class="triangle-down3"></div>
+		<div class="triangle-down4"></div>
+		<div class="triangle-down5"></div>
+
+		<div class="triangle-row2-down1"></div>
+		<div class="triangle-row2-down2"></div>
+		<div class="triangle-row2-down3"></div>
+		<div class="triangle-row2-down4"></div>
+		<div class="triangle-row2-down5"></div>
+
+		<div class="triangle-row3-down1"></div>
+		<div class="triangle-row3-down2"></div>
+		<div class="triangle-row3-down3"></div>
+		<div class="triangle-row3-down4"></div>
+		<div class="triangle-row3-down5"></div>
+
+		<div class="triangle-row4-down1"></div>
+		<div class="triangle-row4-down2"></div>
+		<div class="triangle-row4-down3"></div>
+		<div class="triangle-row4-down4"></div>
+		<div class="triangle-row4-down5"></div>
+
+		<div class="triangle-row5-down1"></div>
+		<div class="triangle-row5-down2"></div>
+		<div class="triangle-row5-down3"></div>
+		<div class="triangle-row5-down4"></div>
+		<div class="triangle-row5-down5"></div>
+
+		<div class="triangle-row6-down1"></div>
+		<div class="triangle-row6-down2"></div>
+		<div class="triangle-row6-down3"></div>
+		<div class="triangle-row6-down4"></div>
+		<div class="triangle-row6-down5"></div>
+
+		<div class="triangle-row7-down1"></div>
+		<div class="triangle-row7-down2"></div>
+		<div class="triangle-row7-down3"></div>
+		<div class="triangle-row7-down4"></div>
+		<div class="triangle-row7-down5"></div>
+
+		<div class="triangle-row8-down1"></div>
+		<div class="triangle-row8-down2"></div>
+		<div class="triangle-row8-down3"></div>
+		<div class="triangle-row8-down4"></div>
+		<div class="triangle-row8-down5"></div>
+
+		<div class="triangle-up"></div>
+
+		<div class="circle"></div> 
+
+			
+		<div class="tree-1"></div>
+		<div class="tree-2"></div>
+		<div class="tree-3"></div>
+		<div class="tree-4"></div>
+		<div class="tree-5"></div>
+		<div class="tree-6"></div>
+		<div class="tree-7"></div>
+		<div class="tree-8"></div>
+
+		<img src="original.jpg" >
+
+
+		
+
+
+
+
+
+	</div>
+
+
+	<h1>FOIRE<br> INTERNATIONALE<br> DE DAKAR</h1>
+
+	<h2>du 3 au 12 decembre 1976</h2>
+		
+</body>
+
+</html>
